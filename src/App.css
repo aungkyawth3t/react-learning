@@ -5,7 +5,7 @@
 
 .App nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
 }
 
 nav ul {
@@ -17,6 +17,9 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   font-size: 16px;
-  font-weight: bold;
   color: black;
+}
+
+nav ul li a.active {
+  color: rgb(0, 151, 252);
 }
