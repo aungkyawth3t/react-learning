@@ -1,18 +1,20 @@
 import useFetch from "../hooks/useFetch";
+import './Home.css';
 
 function Home() {
 
   let url = 'http://localhost:3001/blogs';
   let {data : blogs, loading, error} = useFetch(url);
+
   return (
-    <div>
+    <div className="Home">
       {error && <div> {error} </div>}
       {loading && <div> loading... </div>}
       {blogs && blogs.map(blog => (
-        <div key={blog.id}>
+        <div key={blog.id} className="card">
           <h3> {blog.title} </h3>
           <p> Written by : {blog.author} </p>
-          <p> {blog.content} </p>
+          <a href=""> Read More</a>
         </div>
       ))}
     </div>
