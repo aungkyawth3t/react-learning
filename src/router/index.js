@@ -5,6 +5,7 @@ import {
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import BlogDetail from '../pages/BlogDetail';
 
 let router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ let router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact/>
+      }, 
+      {
+        path: '/blogs/:id/',
+        element: <BlogDetail/>
       }
     ]
   },
